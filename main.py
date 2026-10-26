@@ -1,12 +1,14 @@
 # main.py
 
 import os
+import copy
 import json  # Para manejar el archivo de estado JSON
 from datetime import datetime
 
 import config
 import scraper
 import notifier
+import price_history
 
 STATE_FILE_PATH = "product_states.json"  # Nombre del archivo de estado
 
@@ -117,6 +119,12 @@ def process_product(product_url, product_states):
 
     current_best_offer_type, current_best_price, current_best_price_text = determine_best_offer(product_data)
 
+    # Historial de precios: agrega un punto solo si el precio cambió.
+    # Se guarda dentro de product_states.json (clave "__price_history__").
+    if price_history.record_price(product_states, product_url,
+                                  product_data.get("regular_price_value"), current_best_price):
+        print(f"Main: Cambio de precio registrado en el historial (S/ {current_best_price}).")
+
     # Cargar estado anterior para esta URL
     last_state = product_states.get(product_url, {})
     last_notified_type = last_state.get("last_notified_type")
@@ -171,6 +179,17 @@ def process_product(product_url, product_states):
         # Siempre se muestran las 3 etiquetas de la tienda
         body_price_details = build_price_details_html(product_data, current_best_offer_type)
 
+        # Gráfico del historial (si falla o no hay matplotlib, el correo sale sin gráfico)
+        inline_images = {}
+        body_chart = ""
+        chart_png = price_history.build_chart_png(product_states, product_url)
+        if chart_png:
+            inline_images["price_chart"] = chart_png
+            body_chart = (
+                '<p><img src="cid:price_chart" alt="Historial de precio" width="600" '
+                'style="max-width:100%;height:auto;border:0;"></p>'
+            )
+
         body_footer = f"<p><em>Razón de la notificación: {notification_reason}</em></p>"
         body_footer += f"<p><em>Revisado el: {current_time_str} (UTC)</em></p>"
 
@@ -180,6 +199,7 @@ def process_product(product_url, product_states):
             {body_intro}
             {body_url}
             {body_price_details}
+            {body_chart}
             {body_footer}
         </body>
         </html>
@@ -187,7 +207,8 @@ def process_product(product_url, product_states):
 
         if notifier.send_email_notification(
             email_subject, email_body_html, recipient_email,
-            sender_email, sender_app_password, smtp_server, smtp_port
+            sender_email, sender_app_password, smtp_server, smtp_port,
+            inline_images=inline_images
         ):
             # Solo actualiza el estado guardado si la notificación fue exitosa
             product_states[product_url] = {
@@ -207,7 +228,7 @@ def run_checker():
         return
 
     product_states = load_product_states()
-    initial_states_copy = product_states.copy()  # Para comparar si hubo cambios
+    initial_states_copy = copy.deepcopy(product_states)  # Para comparar si hubo cambios (copia profunda: el historial es anidado)
 
     for url in config.PRODUCT_URLS:
         process_product(url, product_states)  # Pasa el dict de estados para que pueda ser modificado

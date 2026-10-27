@@ -38,5 +38,49 @@
         "last_notified_type": "Precio Promocional",
         "last_notified_price": 36.6,
         "last_checked_timestamp": "2026-10-26T22:31:28.139800"
+    },
+    "__price_history__": {
+        "https://inkafarma.pe/producto/desodorante-gel-invisible-secret-powder-cotton/071389": [
+            {
+                "t": "2026-10-27T00:02:08",
+                "best": 15.5,
+                "regular": 16.9
+            }
+        ],
+        "https://inkafarma.pe/producto/shampoo-vichy-dercos-anticaspa-para-cabello-graso/067310": [
+            {
+                "t": "2026-10-27T00:02:19",
+                "best": 90.9,
+                "regular": 94.9
+            }
+        ],
+        "https://inkafarma.pe/producto/bicarbonato-de-sodio-polvo-solucion-oral/071131": [
+            {
+                "t": "2026-10-27T00:02:30",
+                "best": 17.0,
+                "regular": 17.1
+            }
+        ],
+        "https://inkafarma.pe/producto/vitamin-d-1000-iu-tableta/005569": [
+            {
+                "t": "2026-10-27T00:02:42",
+                "best": 41.7,
+                "regular": 54.9
+            }
+        ],
+        "https://inkafarma.pe/producto/shampoo-tio-nacho-anti-caida-herbolaria-1000-ml/031341": [
+            {
+                "t": "2026-10-27T00:02:54",
+                "best": 36.6,
+                "regular": 39.9
+            }
+        ],
+        "https://inkafarma.pe/producto/vivactiv-complejob-efervescente/028971": [
+            {
+                "t": "2026-10-27T00:03:05",
+                "best": 15.1,
+                "regular": 17.9
+            }
+        ]
     }
 }

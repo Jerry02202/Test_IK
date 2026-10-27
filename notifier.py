@@ -5,11 +5,15 @@ import smtplib
 import ssl
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from email.mime.image import MIMEImage
 
 def send_email_notification(subject, body_html, recipient_email, 
                             sender_email, sender_app_password, 
-                            smtp_server, smtp_port):
-    """Envía una notificación por correo electrónico."""
+                            smtp_server, smtp_port, inline_images=None):
+    """Envía una notificación por correo electrónico.
+
+    inline_images (opcional): dict {cid: bytes_png}. Cada imagen se incrusta en
+    el correo y se muestra con <img src="cid:el_cid"> dentro del HTML."""
     if not all([sender_email, sender_app_password, recipient_email, smtp_server, smtp_port]):
         print("Error: Faltan una o más variables de entorno para la configuración del correo al intentar enviar.")
         return False
@@ -22,12 +26,19 @@ def send_email_notification(subject, body_html, recipient_email,
         return False
 
     try:
-        message = MIMEMultipart("alternative")
+        # "related" permite que el HTML referencie imágenes incrustadas (cid:)
+        message = MIMEMultipart("related")
         message["Subject"] = subject
         message["From"] = sender_email
         message["To"] = recipient_email
 
         message.attach(MIMEText(body_html, "html"))
+
+        for cid, image_bytes in (inline_images or {}).items():
+            image_part = MIMEImage(image_bytes, _subtype="png")
+            image_part.add_header("Content-ID", f"<{cid}>")
+            image_part.add_header("Content-Disposition", "inline", filename=f"{cid}.png")
+            message.attach(image_part)
         context = ssl.create_default_context()
         
         print(f"Notifier: Intentando enviar correo a: {recipient_email} desde: {sender_email} vía {smtp_server}:{smtp_port_int}")

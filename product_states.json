@@ -15,14 +15,14 @@
         "last_checked_timestamp": "2025-10-01T22:18:50.886263"
     },
     "https://inkafarma.pe/producto/desodorante-gel-invisible-secret-powder-cotton/071389": {
-        "last_notified_type": "Precio Promocional",
-        "last_notified_price": 15.5,
-        "last_checked_timestamp": "2026-10-26T22:30:35.912278"
+        "last_notified_type": "Precio regular",
+        "last_notified_price": null,
+        "last_checked_timestamp": "2026-11-02T01:19:16.342613"
     },
     "https://inkafarma.pe/producto/vitamin-d-1000-iu-tableta/005569": {
         "last_notified_type": "Exclusivo oh! y oh! pay",
-        "last_notified_price": 41.7,
-        "last_checked_timestamp": "2026-10-26T22:31:15.176660"
+        "last_notified_price": 36.4,
+        "last_checked_timestamp": "2026-11-02T01:20:27.056808"
     },
     "https://inkafarma.pe/producto/vivactiv-complejob-efervescente/028971": {
         "last_notified_type": "Exclusivo oh! y oh! pay",
@@ -35,9 +35,9 @@
         "last_checked_timestamp": "2026-11-01T00:46:32.336237"
     },
     "https://inkafarma.pe/producto/shampoo-tio-nacho-anti-caida-herbolaria-1000-ml/031341": {
-        "last_notified_type": "Precio regular",
-        "last_notified_price": 39.9,
-        "last_checked_timestamp": "2026-11-01T00:47:06.323451"
+        "last_notified_type": "Exclusivo oh! y oh! pay",
+        "last_notified_price": 32.9,
+        "last_checked_timestamp": "2026-11-02T01:20:59.310316"
     },
     "__price_history__": {
         "https://inkafarma.pe/producto/desodorante-gel-invisible-secret-powder-cotton/071389": [
@@ -71,6 +71,11 @@
                 "t": "2026-10-27T00:02:42",
                 "best": 41.7,
                 "regular": 54.9
+            },
+            {
+                "t": "2026-11-02T01:20:24",
+                "best": 36.4,
+                "regular": 54.9
             }
         ],
         "https://inkafarma.pe/producto/shampoo-tio-nacho-anti-caida-herbolaria-1000-ml/031341": [
@@ -82,6 +87,11 @@
             {
                 "t": "2026-11-01T00:47:06",
                 "best": 39.9,
+                "regular": 39.9
+            },
+            {
+                "t": "2026-11-02T01:20:58",
+                "best": 32.9,
                 "regular": 39.9
             }
         ],

@@ -21,13 +21,13 @@
     },
     "https://inkafarma.pe/producto/vitamin-d-1000-iu-tableta/005569": {
         "last_notified_type": "Exclusivo oh! y oh! pay",
-        "last_notified_price": 36.4,
-        "last_checked_timestamp": "2026-11-02T01:20:27.056808"
+        "last_notified_price": 33.8,
+        "last_checked_timestamp": "2026-11-05T02:01:27.289681"
     },
     "https://inkafarma.pe/producto/vivactiv-complejob-efervescente/028971": {
         "last_notified_type": "Exclusivo oh! y oh! pay",
-        "last_notified_price": 15.1,
-        "last_checked_timestamp": "2026-10-30T01:38:32.928492"
+        "last_notified_price": 11.0,
+        "last_checked_timestamp": "2026-11-05T02:01:52.723968"
     },
     "https://inkafarma.pe/producto/bicarbonato-de-sodio-polvo-solucion-oral/071131": {
         "last_notified_type": "Precio regular",
@@ -81,6 +81,11 @@
                 "t": "2026-11-02T01:20:24",
                 "best": 36.4,
                 "regular": 54.9
+            },
+            {
+                "t": "2026-11-05T02:01:22",
+                "best": 33.8,
+                "regular": 54.9
             }
         ],
         "https://inkafarma.pe/producto/shampoo-tio-nacho-anti-caida-herbolaria-1000-ml/031341": [
@@ -114,6 +119,11 @@
             {
                 "t": "2026-10-30T01:38:30",
                 "best": 15.1,
+                "regular": 17.9
+            },
+            {
+                "t": "2026-11-05T02:01:51",
+                "best": 11.0,
                 "regular": 17.9
             }
         ]

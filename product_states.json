@@ -25,9 +25,9 @@
         "last_checked_timestamp": "2026-11-06T02:01:38.507893"
     },
     "https://inkafarma.pe/producto/vivactiv-complejob-efervescente/028971": {
-        "last_notified_type": "Precio regular",
-        "last_notified_price": null,
-        "last_checked_timestamp": "2026-11-06T02:02:09.975448"
+        "last_notified_type": "Exclusivo oh! y oh! pay",
+        "last_notified_price": 15.1,
+        "last_checked_timestamp": "2026-11-07T01:42:01.918916"
     },
     "https://inkafarma.pe/producto/bicarbonato-de-sodio-polvo-solucion-oral/071131": {
         "last_notified_type": "Precio regular",
@@ -129,6 +129,11 @@
             {
                 "t": "2026-11-05T02:01:51",
                 "best": 11.0,
+                "regular": 17.9
+            },
+            {
+                "t": "2026-11-07T01:42:00",
+                "best": 15.1,
                 "regular": 17.9
             }
         ]

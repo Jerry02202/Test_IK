@@ -5,9 +5,9 @@
         "last_checked_timestamp": "2025-10-16T22:15:59.455749"
     },
     "https://inkafarma.pe/producto/shampoo-vichy-dercos-anticaspa-para-cabello-graso/067310": {
-        "last_notified_type": "Precio regular",
-        "last_notified_price": 94.9,
-        "last_checked_timestamp": "2026-11-17T04:21:00.067044"
+        "last_notified_type": "Exclusivo oh! y oh! pay",
+        "last_notified_price": 85.4,
+        "last_checked_timestamp": "2026-11-24T05:45:53.861645"
     },
     "https://inkafarma.pe/producto/desodorante-barra-invisible-secret-powder-cotton/071306": {
         "last_notified_type": "Precio regular",
@@ -15,14 +15,14 @@
         "last_checked_timestamp": "2025-10-01T22:18:50.886263"
     },
     "https://inkafarma.pe/producto/desodorante-gel-invisible-secret-powder-cotton/071389": {
-        "last_notified_type": "Precio regular",
-        "last_notified_price": 16.9,
-        "last_checked_timestamp": "2026-11-22T01:56:04.694101"
+        "last_notified_type": "Precio Promocional",
+        "last_notified_price": 15.5,
+        "last_checked_timestamp": "2026-11-24T05:45:40.671726"
     },
     "https://inkafarma.pe/producto/vitamin-d-1000-iu-tableta/005569": {
         "last_notified_type": "Exclusivo oh! y oh! pay",
-        "last_notified_price": 41.7,
-        "last_checked_timestamp": "2026-11-20T02:52:50.216378"
+        "last_notified_price": 36.4,
+        "last_checked_timestamp": "2026-11-24T05:46:18.126190"
     },
     "https://inkafarma.pe/producto/vivactiv-complejob-efervescente/028971": {
         "last_notified_type": "Exclusivo oh! y oh! pay",
@@ -30,9 +30,9 @@
         "last_checked_timestamp": "2026-11-20T02:53:15.104462"
     },
     "https://inkafarma.pe/producto/bicarbonato-de-sodio-polvo-solucion-oral/071131": {
-        "last_notified_type": "Precio regular",
-        "last_notified_price": 17.1,
-        "last_checked_timestamp": "2026-11-22T01:56:28.292685"
+        "last_notified_type": "Precio Promocional",
+        "last_notified_price": 17.0,
+        "last_checked_timestamp": "2026-11-24T05:46:05.892746"
     },
     "https://inkafarma.pe/producto/shampoo-tio-nacho-anti-caida-herbolaria-1000-ml/031341": {
         "last_notified_type": "Exclusivo oh! y oh! pay",
@@ -70,6 +70,11 @@
                 "t": "2026-11-22T01:56:04",
                 "best": 16.9,
                 "regular": 16.9
+            },
+            {
+                "t": "2026-11-24T05:45:39",
+                "best": 15.5,
+                "regular": 16.9
             }
         ],
         "https://inkafarma.pe/producto/shampoo-vichy-dercos-anticaspa-para-cabello-graso/067310": [
@@ -81,6 +86,11 @@
             {
                 "t": "2026-11-17T04:21:00",
                 "best": 94.9,
+                "regular": 94.9
+            },
+            {
+                "t": "2026-11-24T05:45:53",
+                "best": 85.4,
                 "regular": 94.9
             }
         ],
@@ -113,6 +123,11 @@
             {
                 "t": "2026-11-22T01:56:28",
                 "best": 17.1,
+                "regular": 17.1
+            },
+            {
+                "t": "2026-11-24T05:46:05",
+                "best": 17.0,
                 "regular": 17.1
             }
         ],
@@ -160,6 +175,11 @@
             {
                 "t": "2026-11-20T02:52:48",
                 "best": 41.7,
+                "regular": 54.9
+            },
+            {
+                "t": "2026-11-24T05:46:17",
+                "best": 36.4,
                 "regular": 54.9
             }
         ],
